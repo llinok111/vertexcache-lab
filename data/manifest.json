@@ -1,0 +1,17 @@
+{
+  "seed": 20261115,
+  "meshes": [
+    {
+      "name": "sphere-soup",
+      "sha": "2b045b5b25d24d8d"
+    },
+    {
+      "name": "sphere-vmajor",
+      "sha": "dc215601159f9028"
+    },
+    {
+      "name": "torus-natural",
+      "sha": "2c674efef434e100"
+    }
+  ]
+}

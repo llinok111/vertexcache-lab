@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>vertexcache-lab — cache-aware index reordering</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; background: #0b0d12; color: #d7dce5; }
+  #app { position: fixed; inset: 0; }
+  #hud { position: fixed; left: 12px; top: 12px; max-width: 460px; background: #12151dcc; border: 1px solid #2a3040; border-radius: 8px; padding: 10px 12px; backdrop-filter: blur(6px); }
+  #hud h1 { margin: 0 0 6px; font-size: 15px; letter-spacing: .02em; }
+  #hud .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  #hud label { color: #8f9bb3; }
+  table { border-collapse: collapse; margin-top: 6px; width: 100%; }
+  td, th { text-align: left; padding: 1px 8px 1px 0; font-weight: 400; }
+  .miss { color: #ff6b6b; } .hit { color: #4ea3ff; } .good { color: #48d597; }
+  input[type=range] { width: 150px; }
+  #legend { margin-top: 6px; color: #8f9bb3; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="hud">
+  <h1>vertexcache-lab</h1>
+  <div class="row">
+    <label>LRU cache size</label>
+    <input id="k" type="range" min="4" max="64" step="1" value="32" />
+    <span id="kv">32</span>
+    <label><input id="toggle" type="checkbox" checked /> show original order</label>
+  </div>
+  <table id="stats"></table>
+  <div id="legend">triangle colour = simulated LRU outcome: <span class="hit">blue = hit</span>, <span class="miss">red = miss</span>. Numbers below are computed by <code>src/core.mjs</code> in this page and are identical to <code>bench/result.json</code>.</div>
+</div>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{
+  "schema": "vertexcache-lab/bench/1",
+  "node": "v24.19.0",
+  "cacheSize": 32,
+  "samples": 9,
+  "measuredAt": "2026-11-15T08:27:47.542Z",
+  "meshes": [
+    {
+      "name": "sphere-soup",
+      "order": "shuffled",
+      "triangles": 20480,
+      "vertices": 10242,
+      "atvrExporterOrder": 2.99267578125,
+      "atvrOptimized": 0.760595703125,
+      "atvrCutPct": 74.58476097242617,
+      "atvrSortByMinVertex": 1.287060546875,
+      "uniqueVertices": 10242,
+      "optimizeMs": {
+        "cold": 15.932561999999997,
+        "min": 5.3859886666666625,
+        "median": 5.426529833333338,
+        "p95": 6.149463833333333,
+        "max": 6.149463833333333,
+        "stddev": 0.23663994635073005,
+        "relStddev": 0.04274254741246324,
+        "samples": 9,
+        "inner": 6
+      },
+      "sortByMinVertexMs": {
+        "min": 8.674245333333337,
+        "median": 8.891674000000004,
+        "p95": 9.988205666666667,
+        "max": 9.988205666666667,
+        "stddev": 0.40850129396185175,
+        "relStddev": 0.045187195592337845,
+        "samples": 9,
+        "inner": 6
+      },
+      "throughputTrisPerMs": 3774.050936603773,
+      "outputHash": 2714608697,
+      "independentOracleHits": {
+        "core": 45863,
+        "naiveLru": 45863
+      }
+    },
+    {
+      "name": "sphere-vmajor",
+      "order": "vertex-major",
+      "triangles": 5120,
+      "vertices": 2562,
+      "atvrExporterOrder": 1.2587890625,
+      "atvrOptimized": 0.7875,
+      "atvrCutPct": 37.43987587276959,
+      "atvrSortByMinVertex": 1.287890625,
+      "uniqueVertices": 2562,
+      "optimizeMs": {
+        "cold": 5.3054839999999786,
+        "min": 1.218681099999992,
+        "median": 1.2526148999999918,
+        "p95": 1.2965823999999997,
+        "max": 1.2965823999999997,
+        "stddev": 0.026916294807796146,
+        "relStddev": 0.02137573532510045,
+        "samples": 9,
+        "inner": 10
+      },
+      "sortByMinVertexMs": {
+        "min": 0.5810271999999941,
+        "median": 0.5937633000000005,
+        "p95": 0.6129533000000038,
+        "max": 0.6129533000000038,
+        "stddev": 0.010405301139906467,
+        "relStddev": 0.017517840717268154,
+        "samples": 9,
+        "inner": 10
+      },
+      "throughputTrisPerMs": 4087.449382886978,
+      "outputHash": 1940992085,
+      "independentOracleHits": {
+        "core": 11328,
+        "naiveLru": 11328
+      }
+    },
+    {
+      "name": "torus-natural",
+      "order": "natural-grid",
+      "triangles": 9216,
+      "vertices": 4608,
+      "atvrExporterOrder": 1.0105251736111112,
+      "atvrOptimized": 0.8760850694444444,
+      "atvrCutPct": 13.30398367872867,
+      "atvrSortByMinVertex": 0.9951171875,
+      "uniqueVertices": 4608,
+      "optimizeMs": {
+        "cold": 2.1168789999999262,
+        "min": 2.0478727999999817,
+        "median": 2.069049599999994,
+        "p95": 2.167528799999991,
+        "max": 2.167528799999991,
+        "stddev": 0.03471721731184218,
+        "relStddev": 0.016664866644624292,
+        "samples": 9,
+        "inner": 10
+      },
+      "sortByMinVertexMs": {
+        "min": 0.9098905999999942,
+        "median": 0.9814259999999877,
+        "p95": 1.4644050000000106,
+        "max": 1.4644050000000106,
+        "stddev": 0.16148387298527608,
+        "relStddev": 0.1557209953745223,
+        "samples": 9,
+        "inner": 10
+      },
+      "throughputTrisPerMs": 4454.218980540644,
+      "outputHash": 1617833749,
+      "independentOracleHits": {
+        "core": 19574,
+        "naiveLru": 19574
+      }
+    }
+  ]
+}
